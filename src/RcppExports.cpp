@@ -5,9 +5,75 @@
 
 using namespace Rcpp;
 
+// concurrentActivity
+NumericVector concurrentActivity(int outlen, NumericVector StartSecond, NumericVector Duration);
+RcppExport SEXP _ConcurrentActivity_concurrentActivity(SEXP outlenSEXP, SEXP StartSecondSEXP, SEXP DurationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type outlen(outlenSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type StartSecond(StartSecondSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type Duration(DurationSEXP);
+    rcpp_result_gen = Rcpp::wrap(concurrentActivity(outlen, StartSecond, Duration));
+    return rcpp_result_gen;
+END_RCPP
+}
+// concurrentActivity1
+NumericVector concurrentActivity1(int outlen, NumericVector StartSecond, NumericVector Duration);
+RcppExport SEXP _ConcurrentActivity_concurrentActivity1(SEXP outlenSEXP, SEXP StartSecondSEXP, SEXP DurationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type outlen(outlenSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type StartSecond(StartSecondSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type Duration(DurationSEXP);
+    rcpp_result_gen = Rcpp::wrap(concurrentActivity1(outlen, StartSecond, Duration));
+    return rcpp_result_gen;
+END_RCPP
+}
+// concurrentActivityET
+NumericVector concurrentActivityET(int outlen, NumericVector EndSecond, NumericVector Duration);
+RcppExport SEXP _ConcurrentActivity_concurrentActivityET(SEXP outlenSEXP, SEXP EndSecondSEXP, SEXP DurationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type outlen(outlenSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type EndSecond(EndSecondSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type Duration(DurationSEXP);
+    rcpp_result_gen = Rcpp::wrap(concurrentActivityET(outlen, EndSecond, Duration));
+    return rcpp_result_gen;
+END_RCPP
+}
+// concurrentActivity
+NumericVector concurrentActivity(int outlen, NumericVector StartSecond, NumericVector Duration);
+RcppExport SEXP _ConcurrentActivity_concurrentActivity(SEXP outlenSEXP, SEXP StartSecondSEXP, SEXP DurationSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type outlen(outlenSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type StartSecond(StartSecondSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type Duration(DurationSEXP);
+    rcpp_result_gen = Rcpp::wrap(concurrentActivity(outlen, StartSecond, Duration));
+    return rcpp_result_gen;
+END_RCPP
+}
+// concurrentEstimatedThroughput
+NumericVector concurrentEstimatedThroughput(int outlen, NumericVector StartSecond, NumericVector Duration, NumericVector Bytes);
+RcppExport SEXP _ConcurrentActivity_concurrentEstimatedThroughput(SEXP outlenSEXP, SEXP StartSecondSEXP, SEXP DurationSEXP, SEXP BytesSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type outlen(outlenSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type StartSecond(StartSecondSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type Duration(DurationSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type Bytes(BytesSEXP);
+    rcpp_result_gen = Rcpp::wrap(concurrentEstimatedThroughput(outlen, StartSecond, Duration, Bytes));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
-RcppExport SEXP ConcurrentActivity_rcpp_hello_world() {
+RcppExport SEXP _ConcurrentActivity_rcpp_hello_world() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -16,7 +82,15 @@ BEGIN_RCPP
 END_RCPP
 }
 
+RcppExport SEXP ConcurrentActivity_rcpp_hello_world();
+
 static const R_CallMethodDef CallEntries[] = {
+    {"_ConcurrentActivity_concurrentActivity", (DL_FUNC) &_ConcurrentActivity_concurrentActivity, 3},
+    {"_ConcurrentActivity_concurrentActivity1", (DL_FUNC) &_ConcurrentActivity_concurrentActivity1, 3},
+    {"_ConcurrentActivity_concurrentActivityET", (DL_FUNC) &_ConcurrentActivity_concurrentActivityET, 3},
+    {"_ConcurrentActivity_concurrentActivity", (DL_FUNC) &_ConcurrentActivity_concurrentActivity, 3},
+    {"_ConcurrentActivity_concurrentEstimatedThroughput", (DL_FUNC) &_ConcurrentActivity_concurrentEstimatedThroughput, 4},
+    {"_ConcurrentActivity_rcpp_hello_world", (DL_FUNC) &_ConcurrentActivity_rcpp_hello_world, 0},
     {"ConcurrentActivity_rcpp_hello_world", (DL_FUNC) &ConcurrentActivity_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
