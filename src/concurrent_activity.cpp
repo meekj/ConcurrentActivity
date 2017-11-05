@@ -33,11 +33,8 @@ NumericVector concurrentEstimatedThroughput(int outlen, NumericVector StartSecon
   double bytes_per_second;
 
   for(int i = 0; i < n; ++i) {      // Process each event
-    //    istart = round(StartSecond[i]);
     istart = int(StartSecond[i]);
-    // iduration = floor(Duration[i] + 0.5); // Number of bins to increment
-    // iduration = round(Duration[i]); // Number of bins to increment
-    iduration = ceil(Duration[i]); // Number of bins to increment
+    iduration = ceil(Duration[i]);  // Number of bins to increment
 
     if (iduration <= 1) {           // Just increment one bin
       cca[istart] += Bytes[i];
@@ -52,6 +49,4 @@ NumericVector concurrentEstimatedThroughput(int outlen, NumericVector StartSecon
   }
   return cca;
 }
-
-
 
