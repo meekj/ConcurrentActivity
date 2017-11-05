@@ -1,0 +1,6 @@
+*~
+man/rcpp_hello_world.Rd
+src/rcpp_hello_world.cpp
+src/concurrent_activity-dev.cpp
+data/test-large1.rds
+data/test-large2.rds

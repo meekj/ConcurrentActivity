@@ -1,0 +1,13 @@
+Package: ConcurrentActivity
+Type: Package
+Title: Compute Concurrent Sessions and Estimated Throughput from Firewall and Proxy Log Data
+Version: 0.01
+Date: 2017-11-03
+Author: Jon Meek
+Maintainer: Jon Meek <meekj@ieee.org>
+Description: Using session start time and duration compute number of active sessions pure unit time (nominally one second).
+        Similarly, compute estimated throughput by adding number of bytes transferred during the session and assuming that
+	traffic is evenly distributed across the session duration.
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.12.11)
+LinkingTo: Rcpp
