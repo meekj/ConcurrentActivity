@@ -1,0 +1,2 @@
+PKG_CXXFLAGS=-Ofast -march=native
+
