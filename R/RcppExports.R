@@ -5,18 +5,6 @@ concurrentActivity <- function(outlen, StartSecond, Duration) {
     .Call(`_ConcurrentActivity_concurrentActivity`, outlen, StartSecond, Duration)
 }
 
-concurrentActivity1 <- function(outlen, StartSecond, Duration) {
-    .Call(`_ConcurrentActivity_concurrentActivity1`, outlen, StartSecond, Duration)
-}
-
-concurrentActivityET <- function(outlen, EndSecond, Duration) {
-    .Call(`_ConcurrentActivity_concurrentActivityET`, outlen, EndSecond, Duration)
-}
-
-concurrentActivity <- function(outlen, StartSecond, Duration) {
-    .Call(`_ConcurrentActivity_concurrentActivity`, outlen, StartSecond, Duration)
-}
-
 concurrentEstimatedThroughput <- function(outlen, StartSecond, Duration, Bytes) {
     .Call(`_ConcurrentActivity_concurrentEstimatedThroughput`, outlen, StartSecond, Duration, Bytes)
 }
