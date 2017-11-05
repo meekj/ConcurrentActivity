@@ -43,15 +43,10 @@ BEGIN_RCPP
 END_RCPP
 }
 
-RcppExport SEXP _ConcurrentActivity_concurrentActivity1(SEXP, SEXP, SEXP);
-RcppExport SEXP _ConcurrentActivity_concurrentActivityET(SEXP, SEXP, SEXP);
-
 static const R_CallMethodDef CallEntries[] = {
     {"_ConcurrentActivity_concurrentActivity", (DL_FUNC) &_ConcurrentActivity_concurrentActivity, 3},
     {"_ConcurrentActivity_concurrentEstimatedThroughput", (DL_FUNC) &_ConcurrentActivity_concurrentEstimatedThroughput, 4},
     {"_ConcurrentActivity_rcpp_hello_world", (DL_FUNC) &_ConcurrentActivity_rcpp_hello_world, 0},
-    {"_ConcurrentActivity_concurrentActivity1",           (DL_FUNC) &_ConcurrentActivity_concurrentActivity1,           3},
-    {"_ConcurrentActivity_concurrentActivityET",          (DL_FUNC) &_ConcurrentActivity_concurrentActivityET,          3},
     {NULL, NULL, 0}
 };
 
